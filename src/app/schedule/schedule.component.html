@@ -1,0 +1,29 @@
+<div style="width: 100%;">
+    <div class="titleCtn">
+        <h1 class="scdlTitle">Schedule your session!</h1>
+        <h2 class="scdlSubTitle">Timezone: Lisbon (+1) </h2>
+    </div>
+    <div class="mainSchdlCtn">
+        <div class="headerShadowCtn"></div>
+        <div class="contentShadowCtn"></div>
+        <div class="schdlCtn">
+            <p-carousel [value]="dates" [numScroll]="4" [numVisible]="4">
+                <ng-template let-date pTemplate="item">
+                    <div class="dayCtn">
+                        <h2 class="weekDayTxt">{{dayOfWeek(date.day)}}</h2>
+                        <h2 class="dayMonthTxt">{{getMonthAndDate(date.day)}}</h2>
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <div class="timeCtn" *ngFor="let time of date.avlb;index as i;"
+                            [ngClass]="{'hide': i > 4 && !showMore}">
+                            <p class="timeTxt">{{time}}</p>
+                        </div>
+                        <div class="timeCtn">
+                            <p (click)="changeTimes(date)" class="timeTxt">{{showMore? 'LESS': 'MORE'}}</p>
+                        </div>
+                    </div>
+                </ng-template>
+            </p-carousel>
+        </div>
+    </div>
+</div>

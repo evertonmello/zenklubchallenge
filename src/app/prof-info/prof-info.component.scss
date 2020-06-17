@@ -1,0 +1,37 @@
+.avatarCtn {
+    float: left;
+    align-self: center;
+    margin-right: 20px;
+    .avatar{
+      border-radius: 50%;
+    }
+}
+
+.basicInfo{
+    height: 130px;
+}
+
+.title{
+    color: #4c5960;
+    margin: 5px 5px;
+}
+
+.ocupation{
+    font-size: 11px;
+    margin: 10px 0 0 0;
+    &.title{
+        color: #027bdc;
+        font-weight: bold;
+    }
+}
+
+.price{
+    margin-top: 5px;
+    font-size: 12px;
+    &.v{
+        font-size: 15px;
+    }
+}
+.bio{
+    font-size: 13px;
+}

@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AppService } from './app.service'
+import { AppService } from './../app.service'
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'schedule',
+  templateUrl: './schedule.component.html',
+  styleUrls: ['./schedule.component.scss']
 })
-export class AppComponent implements OnInit {
+export class ScheduleComponent implements OnInit {
 
-  title = 'zenklubchallenge';
   showMore = false;
   dates;
   constructor(private appService:AppService) {}
@@ -38,5 +37,4 @@ export class AppComponent implements OnInit {
     let monthStr = date.toString().slice(4,7)
     return monthStr + " " + dayStr;
   }
-
 }
