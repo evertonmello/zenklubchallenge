@@ -41,6 +41,14 @@
     height: 45px;
      padding: 5px;
 }
+
+.dayCtnh{
+    text-align: center;
+    height: 45px;
+     padding: 5px;
+     width: 60px;
+     min-width: 60px;
+}
 .contentShadowCtn{
     position: absolute;
     bottom: 0;
@@ -81,4 +89,89 @@
 
 .hide{
     display: none;
+}
+
+.scheduleContainer{
+    margin-top: 30px;
+    display: flex;
+    width: 240px;
+    overflow: auto;
+    overflow-x: hidden;
+    
+    &.allTimes{
+        width: 260px;
+    }
+}
+
+
+
+
+.scdlContent{
+    position: relative;
+    width: 330px;
+}
+
+.shadowCtn{
+    box-shadow: 0px 3px 7px #888888; 
+}
+
+.scdlHeaderCtn{
+    display: flex;width: 234px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.timesContainer{
+    box-shadow: 0px 3px 7px #888888;
+    padding: 3px 0 3px 0;
+    margin-top: 13px;
+}
+
+.contentScroll{
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 240px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.scrollContent{
+    display: flex;
+    transition-duration: 0.2s;
+}
+
+.timesContents{
+    width: 60px;
+    height: 200px;
+}
+
+.prev-nextBtn{
+    border-radius: 50%;
+    height: 24px;
+    border: 0;
+    width: 22px;
+    height: 22px;
+    color: white;
+    background-color: gray;
+    position: absolute;
+    top: 10px;
+    cursor: pointer;
+    &.prev{
+        left: 25px;
+    }
+    &.next{
+        right: 25px;
+    }
+}
+
+.titleCtn{
+    width: 330px;
+}
+
+.dsbl{
+    opacity: 0.5;
+    pointer-events: none;
 }

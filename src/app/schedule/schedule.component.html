@@ -1,5 +1,5 @@
-<div>
-    <div class="titleCtn">
+<div style="width: 400px;">
+    <!-- <div class="titleCtn">
         <h1 class="scdlTitle">Schedule your session!</h1>
         <h2 class="scdlSubTitle">Timezone: Lisbon (+1) </h2>
     </div>
@@ -19,11 +19,54 @@
                             <p class="timeTxt">{{time}}</p>
                         </div>
                         <div class="timeCtn">
-                            <p (click)="changeTimes(date)" class="timeTxt">{{showMore? 'LESS': 'MORE'}}</p>
+                            <p  class="timeTxt">{{showMore? 'LESS': 'MORE'}}</p>
                         </div>
                     </div>
                 </ng-template>
             </p-carousel>
         </div>
+    </div> -->
+
+
+
+    <div class="titleCtn">
+        <h1 class="scdlTitle">Schedule your session!</h1>
+        <h2 class="scdlSubTitle">Timezone: Lisbon (+1) </h2>
     </div>
+
+    <div class="scdlContent">
+        <div class="shadowCtn">
+            <button  (click)="prev()" class="prev-nextBtn prev" [ngClass]="{'dsbl': dsblPrev()}">< </button>
+            <button  (click)="next()" class="prev-nextBtn next"[ngClass]="{'dsbl': dsblNext()}">> </button>
+
+            <div class="scdlHeaderCtn">
+                <div #hdrTimeCtn style="display: flex; transition-duration: 0.2s;">
+                    <div *ngFor="let date of dates" class="dayCtnh">
+                        <h2 class="weekDayTxt">{{dayOfWeek(date.day)}}</h2>
+                        <h2 class="dayMonthTxt">{{getMonthAndDate(date.day)}}</h2>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="timesContainer">
+            <div class="contentScroll" [ngClass]="{'allTimes': showMore}">
+                <div #timesCtn class="scrollContent" >
+                    <div *ngFor="let date of dates">
+                        <div class="timesContents">
+                            <div class="timeCtn" *ngFor="let time of date.avlb;index as i;"
+                                [ngClass]="{'hide': i > 4 && !showMore}">
+                                <p class="timeTxt">{{time}}</p>
+                            </div>
+                            <div class="timeCtn">
+                                <p (click)="changeTimes(date)" class="timeTxt">{{showMore? 'LESS': 'MORE'}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div> 
 </div>
