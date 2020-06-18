@@ -27,7 +27,7 @@ export class ScheduleComponent implements OnInit {
     this.appService.getTimes().subscribe((times:Array<any>)=>{
       this.dates = times;
     },(error)=>{
-      alert('Ops, ocorreu um erro' + error.message)
+      alert('Ops, error' + error.message)
     })
   }
 
