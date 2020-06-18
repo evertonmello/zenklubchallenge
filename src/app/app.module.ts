@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {CarouselModule} from 'primeng/carousel';
-import { ReviewComponent } from './review/review.component';
+import { ReviewComponent } from './prof-info/review/review.component';
 import { AppService } from './app.service';
 import { ProfInfoComponent } from './prof-info/prof-info.component';
 import { ScheduleComponent } from './schedule/schedule.component'
